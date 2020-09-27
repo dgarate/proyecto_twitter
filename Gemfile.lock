@@ -1,3 +1,20 @@
+GIT
+  remote: https://github.com/kaminari/kaminari
+  revision: cd8601cc42b67267c15a13174bc2fc9bd5de1032
+  specs:
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,7 +73,6 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
-    acts_as_votable (0.12.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     bcrypt (3.1.16)
@@ -204,12 +220,12 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  acts_as_votable (~> 0.12.1)
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
   devise
   jbuilder (~> 2.7)
+  kaminari!
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.3)

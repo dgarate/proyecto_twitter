@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
+  
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.page(params[:page])
   end
+
 end

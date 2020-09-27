@@ -12,10 +12,6 @@
           <h3 class="black"><td><%= link_to tweet.user.email, user_profile_path(tweet.user) %></td></h3>
           <h2><td><%= tweet.tweet %></td></h2>
           <h3><td><%= tweet.created_at %></td></h3>
-
-          
-
-
           <span class="twitter-button">
             <%= link_to "Delete", tweet_path(tweet.id), :confirm => "Are you sure?", :method => :delete %>
           </span>

@@ -25,7 +25,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'devise'
-gem 'acts_as_votable', '~> 0.12.1'
+#gem 'acts_as_votable', '~> 0.12.1'
+gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
