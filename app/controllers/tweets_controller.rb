@@ -1,7 +1,8 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-
+  
+  
   # GET /tweets
   # GET /tweets.json
   def index
@@ -73,4 +74,5 @@ class TweetsController < ApplicationController
     def tweet_params
       params.require(:tweet).permit(:tweet)
     end
+   
 end

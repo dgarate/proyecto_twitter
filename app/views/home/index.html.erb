@@ -8,6 +8,7 @@
       <h1><%= link_to tweet.user.email, user_profile_path(tweet.user) %></h1>
       <h2><td><%= tweet.tweet %></td></h2>
       <h3><td><%= tweet.created_at %></td></h3>
+      <h3> Likes <td><%= tweet.user_id %></td></h3>
     </tr>
   <% end %>
 </div>
