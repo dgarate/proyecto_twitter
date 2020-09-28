@@ -4,9 +4,11 @@ Rails.application.routes.draw do
     resources :likes
   end
   
-  resources :users, only: [:profile] do
-    get 'profile'
-  end 
+  # resources :users
+  
+  #, only: [:profile] do
+  # get 'profile'
+  #end 
 
   #get 'home/index'
   devise_for :users, controllers: { registrations: 'users/registrations' }
