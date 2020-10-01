@@ -15,4 +15,13 @@ class UsersController < ApplicationController
       # GET /tweets/1.json
       def show
       end
+
+    
+      
+
+
+
+
+
+      
 end

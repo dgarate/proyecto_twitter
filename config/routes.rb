@@ -4,6 +4,14 @@ Rails.application.routes.draw do
     resources :likes
   end
   
+
+  resources :users do		
+    member do		
+      get :following, :followers		
+    end		
+  end		
+
+
   # resources :users
   
   #, only: [:profile] do
