@@ -2,6 +2,25 @@ Rails.application.routes.draw do
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+  namespace :admin do 
+    resources :users do
+      resources :tweets
+    end
+  end
+  
+  namespace :admin do 
+    resources :users do
+      resources :likes
+    end
+  end
+
+  namespace :admin do 
+    resources :users do
+      resources :friends
+    end
+  end
+
+
   resources :tweets do
     resources :likes
   end
