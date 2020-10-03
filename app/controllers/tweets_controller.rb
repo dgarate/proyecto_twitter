@@ -7,7 +7,12 @@ class TweetsController < ApplicationController
   # GET /tweets
   # GET /tweets.json
   def index
-    @tweets = Tweet.all
+    
+    if params[:tweet].present?
+      @tweets = Tweet.where('tweet like ?', "%#{params[:tweet]}%")
+    else
+      @tweets = Tweet.all
+    end
   end
 
   # GET /tweets/1
@@ -65,6 +70,8 @@ class TweetsController < ApplicationController
     end
   end
 
+
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tweet
