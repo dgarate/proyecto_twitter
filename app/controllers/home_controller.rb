@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   
   def index
-    
+    @tweets = Tweet.all
   
   if params[:tweet].present?
     @tweets = Tweet.where('tweet like ?', "%#{params[:tweet]}%").order('created_at DESC').page(params[:page])

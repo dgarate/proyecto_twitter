@@ -5,7 +5,11 @@ class Tweet < ApplicationRecord
 
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
-   
+  
+  scope :tweets_for_me, -> {where(tweets.user_id = current_user.friends.followed_id)}
+
+
+
   after_create do
     tweet = Tweet.find_by(id: self.id)
     hashtags = self.tweet.scan(/#\w+/)
