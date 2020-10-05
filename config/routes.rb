@@ -13,18 +13,20 @@ Rails.application.routes.draw do
       resources :likes
     end
   end
-
+  
   namespace :admin do 
     resources :users do
       resources :friends
     end
   end
-
-
+  
+  
   resources :tweets do
     resources :likes
   end
   
+  
+  get '/tweets/hashtag/:name', to:'tweets#hashtags'
 
   # resources :users do		
   #   member do		

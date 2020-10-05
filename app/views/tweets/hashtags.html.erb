@@ -18,6 +18,7 @@
     <% @tweets.each do |tweet| %>
       <tr>
         <td><%= render_with_hashtags(tweet.tweet) %></td>
+        
         <td><%= tweet.user_id %></td>
         <td><%= tweet.likes.count %></td>
         <td><%= link_to 'Show', tweet %></td>
@@ -31,4 +32,3 @@
 <br>
 
 <%= link_to 'New Tweet', new_tweet_path %>
-
