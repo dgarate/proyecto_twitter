@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+
+  namespace :api do
+      # get 'tweets/:id/:id', to: '/api/tweets#show'
+      resources :tweets, path: :news, only: [:index, :show, :create, :destroy]
+      # get '/api/tweets/*date', :controller => 'api/tweets', :action => 'index'
+    end
   
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   namespace :admin do 
